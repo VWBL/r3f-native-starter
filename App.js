@@ -17,7 +17,6 @@ export default function App() {
       <directionalLight intensity={1.1} position={[0.5, 0, 0.866]} />
       <directionalLight intensity={0.8} position={[-6, 2, 2]} />
       <Suspense>
-        <Environment preset="park" />
         <Model url={iphoneModelPath} />
       </Suspense>
     </Canvas>
