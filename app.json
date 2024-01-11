@@ -7,9 +7,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.v8r3freactnative"
+    },
+    "android": {
+      "package": "com.anonymous.v8r3freactnative"
     }
   }
 }
