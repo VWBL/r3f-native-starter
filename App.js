@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { useFrame, Canvas } from '@react-three/fiber/native'
 import { useGLTF, Environment } from '@react-three/drei/native'
-import iphoneModelPath from './assets/iphone.glb'
+import iphoneModelPath from './assets/avaturn_demo_avatar_01.glb'
 
 function Model({ url, ...rest }) {
   const { scene } = useGLTF(url)
