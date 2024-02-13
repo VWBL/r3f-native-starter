@@ -8,30 +8,7 @@ import modelPath from './assets/Ochiai_F2_20240117_v1.glb'
 
 
 function Model({ url, ...rest }) {
-  const group = useRef();
   const { scene, animations } = useGLTF(url, true, GLTFLoader);
-  const { actions ,names } = useAnimations(animations, group)
-
-
-
-  console.log("###################" );
-  console.log(scene);
-  console.log("###################" );
-
-  console.log("###################" );
-  console.log(animations);
-  console.log("###################" );
-
-  console.log("###################" );
-  console.log(actions);
-  console.log("###################" );
-
-
-  names.forEach(element => {
-    console.log("###################" );
-    console.log("name : " + element);
-    console.log("###################" );
-  });
 
   const mixer = useRef();
 
@@ -49,19 +26,7 @@ function Model({ url, ...rest }) {
     mixer.current.update(delta);
   });
 
-  // actions.forEach(element => {
-  //   console.log("name : " + element);
-  // });
-
-  // useEffect(() => {
-  //   // モデルがロードされた後にアニメーションを再生する
-  //   if ( actions ) {
-  //       actions[names[0]].play();
-  //   }
-  // }, [actions, names,mixer]);
-
-  // useFrame(() => (scene.rotation.y += 0.01))
-  return <primitive {...rest} ref={group} object={scene} />
+  return <primitive {...rest} object={scene} />
 }
 
 export default function App() {
